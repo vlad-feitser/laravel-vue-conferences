@@ -1,0 +1,1216 @@
+{
+	"info": {
+		"_postman_id": "28fb536c-6c99-40c8-a6fc-ea7e864e2bdd",
+		"name": "laravel_vue",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21792962"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/sanctum/csrf-cookie/",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/sanctum/csrf-cookie/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"sanctum",
+						"csrf-cookie",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "When user no authorize"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/login?email=admin@groupbwt.com&password=12345678",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6InJNYWdhSndnVTZlektjZTFlMlZBTnc9PSIsInZhbHVlIjoidTByZlE2RGdjQmlPZGo5c1g0NElWOUFtWUZDZVA3ZUZJTlg4RDNndEdTOXNGVHN2RTR6RG5hL2VSRmJsR3Y5dnFQU1VKMHpnVStwWkROSzJPNXArR08vdTZGbFUzSnRHL3dkREJEYmZBcThmd25EdUdDUzQyN2p4MUxVTmlIaHMiLCJtYWMiOiI0Y2EzZGZiOGY4OWNkNjMzNjU2NWNhM2Q2ZmJhM2M2YWI2MjdmMmViZjE2ZDE2ZTY4YzkzNjc2N2QxODg1NzIwIiwidGFnIjoiIn0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/login?email=admin@groupbwt.com&password=12345678",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin@groupbwt.com"
+						},
+						{
+							"key": "password",
+							"value": "12345678"
+						}
+					]
+				},
+				"description": "login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/logout",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6IlA0TnBXRlowRFdzOUg1d1lHRDBxdHc9PSIsInZhbHVlIjoiSXJRSDRrUEZ2RUhIQzdReXZ1NWtBU1lIOHpwWFlKbEsxWUNESmY3cTk0WkpiaG1naWRQeFVIYkwzdjRYb0gzQytoYkNmYmxWeHU1bHduTnRMUnZiOFBYZ3FFQmxreHlxdnlqYlBwZCtUT2FRcndoYW9FeWNUNDh4NFl5L3UyVnciLCJtYWMiOiJhYzM4NTg4MzNkMDA4ODFkN2U1MTFmYzA1Zjc2MDExOGYyMjQ0ZWJhOWY3ZTYyNzQ3YjEzZmVjYzRiMzhiZDFkIiwidGFnIjoiIn0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"logout"
+					]
+				},
+				"description": "logout"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/conferences?title=postman title&date=2022-08-27&latitude=42.162&longitude=53.1648&country=Ukraine",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6IlA0TnBXRlowRFdzOUg1d1lHRDBxdHc9PSIsInZhbHVlIjoiSXJRSDRrUEZ2RUhIQzdReXZ1NWtBU1lIOHpwWFlKbEsxWUNESmY3cTk0WkpiaG1naWRQeFVIYkwzdjRYb0gzQytoYkNmYmxWeHU1bHduTnRMUnZiOFBYZ3FFQmxreHlxdnlqYlBwZCtUT2FRcndoYW9FeWNUNDh4NFl5L3UyVnciLCJtYWMiOiJhYzM4NTg4MzNkMDA4ODFkN2U1MTFmYzA1Zjc2MDExOGYyMjQ0ZWJhOWY3ZTYyNzQ3YjEzZmVjYzRiMzhiZDFkIiwidGFnIjoiIn0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/conferences?title=postman title&date=2022-08-27&latitude=42.162&longitude=53.1648&country=Ukraine",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"conferences"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "postman title"
+						},
+						{
+							"key": "date",
+							"value": "2022-08-27"
+						},
+						{
+							"key": "latitude",
+							"value": "42.162"
+						},
+						{
+							"key": "longitude",
+							"value": "53.1648"
+						},
+						{
+							"key": "country",
+							"value": "Ukraine"
+						}
+					]
+				},
+				"description": "add conference by admin"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/conferences/11?title=postman update title&date=2022-08-27&latitude=42.162&longitude=53.1648&country=Ukraine",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6IlA0TnBXRlowRFdzOUg1d1lHRDBxdHc9PSIsInZhbHVlIjoiSXJRSDRrUEZ2RUhIQzdReXZ1NWtBU1lIOHpwWFlKbEsxWUNESmY3cTk0WkpiaG1naWRQeFVIYkwzdjRYb0gzQytoYkNmYmxWeHU1bHduTnRMUnZiOFBYZ3FFQmxreHlxdnlqYlBwZCtUT2FRcndoYW9FeWNUNDh4NFl5L3UyVnciLCJtYWMiOiJhYzM4NTg4MzNkMDA4ODFkN2U1MTFmYzA1Zjc2MDExOGYyMjQ0ZWJhOWY3ZTYyNzQ3YjEzZmVjYzRiMzhiZDFkIiwidGFnIjoiIn0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/conferences/11?title=postman update title&date=2022-08-27&latitude=42.162&longitude=53.1648&country=Ukraine",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"conferences",
+						"11"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "postman update title"
+						},
+						{
+							"key": "date",
+							"value": "2022-08-27"
+						},
+						{
+							"key": "latitude",
+							"value": "42.162"
+						},
+						{
+							"key": "longitude",
+							"value": "53.1648"
+						},
+						{
+							"key": "country",
+							"value": "Ukraine"
+						}
+					]
+				},
+				"description": "update conference by admin"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/conferences/5",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6IlA0TnBXRlowRFdzOUg1d1lHRDBxdHc9PSIsInZhbHVlIjoiSXJRSDRrUEZ2RUhIQzdReXZ1NWtBU1lIOHpwWFlKbEsxWUNESmY3cTk0WkpiaG1naWRQeFVIYkwzdjRYb0gzQytoYkNmYmxWeHU1bHduTnRMUnZiOFBYZ3FFQmxreHlxdnlqYlBwZCtUT2FRcndoYW9FeWNUNDh4NFl5L3UyVnciLCJtYWMiOiJhYzM4NTg4MzNkMDA4ODFkN2U1MTFmYzA1Zjc2MDExOGYyMjQ0ZWJhOWY3ZTYyNzQ3YjEzZmVjYzRiMzhiZDFkIiwidGFnIjoiIn0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/conferences/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"conferences",
+						"5"
+					]
+				},
+				"description": "delete conference by admin"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/conferences/2",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/conferences/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"conferences",
+						"2"
+					]
+				},
+				"description": "conference show"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/lectures/2/show",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/lectures/2/show",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"lectures",
+						"2",
+						"show"
+					]
+				},
+				"description": "lectures to conference where conference_id=2"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/conferences/2/edit",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/conferences/2/edit",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"conferences",
+						"2",
+						"edit"
+					]
+				},
+				"description": "page for conference edit"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/twitter_config",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/twitter_config",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"twitter_config"
+					]
+				},
+				"description": "config for twitter"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/lectures",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/lectures",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"lectures"
+					]
+				},
+				"description": "take all lectures"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/lectures/41",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/lectures/41",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"lectures",
+						"41"
+					]
+				},
+				"description": "page with details about Lecture"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/lectures/41/downloadPresentation",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "multipart/form-data",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/lectures/41/downloadPresentation",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"lectures",
+						"41",
+						"downloadPresentation"
+					]
+				},
+				"description": "link for download file with presentation to Lection"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/comments/41",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/comments/41",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"comments",
+						"41"
+					]
+				},
+				"description": "take comments to lecture with specified lecture_id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/comments?lecture_id=41&content=<p>It's postman comment!</p>",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6Ikk1NWhjUTZlQmRFTWVicVFDV2prblE9PSIsInZhbHVlIjoiNUJCOVEwSTZEdUtjK1MzWGtIc2ZqbTFmL2JCTENCWGlGWktWeXNESi9oVnNFOEhmKzYyUnVydzJ2V1UwcGJ1a1VjVVhsME9hWVFXeU5WQkNObFh1aCtzRzFzQ0U2NDJ6MU5LaWd4YTVrcXluWjI3NitsMENoT1laM3N1WkJubVQiLCJtYWMiOiI2MWQ0ODZiZjc2NjEyNWYyMGI4ZTg3M2JkZDUxNmVmOTIyMTE1YzBiNzY2YmExMDJlY2IzNGE4MDBlNWU3NTM4IiwidGFnIjoiIn0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/comments?lecture_id=41&content=<p>It's postman comment!</p>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"comments"
+					],
+					"query": [
+						{
+							"key": "lecture_id",
+							"value": "41"
+						},
+						{
+							"key": "content",
+							"value": "<p>It's postman comment!</p>"
+						}
+					]
+				},
+				"description": "add comment by user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/comments/32?lecture_id=41&content=<p>It's updated postman comment!</p>",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6Ikk1NWhjUTZlQmRFTWVicVFDV2prblE9PSIsInZhbHVlIjoiNUJCOVEwSTZEdUtjK1MzWGtIc2ZqbTFmL2JCTENCWGlGWktWeXNESi9oVnNFOEhmKzYyUnVydzJ2V1UwcGJ1a1VjVVhsME9hWVFXeU5WQkNObFh1aCtzRzFzQ0U2NDJ6MU5LaWd4YTVrcXluWjI3NitsMENoT1laM3N1WkJubVQiLCJtYWMiOiI2MWQ0ODZiZjc2NjEyNWYyMGI4ZTg3M2JkZDUxNmVmOTIyMTE1YzBiNzY2YmExMDJlY2IzNGE4MDBlNWU3NTM4IiwidGFnIjoiIn0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/comments/32?lecture_id=41&content=<p>It's updated postman comment!</p>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"comments",
+						"32"
+					],
+					"query": [
+						{
+							"key": "lecture_id",
+							"value": "41"
+						},
+						{
+							"key": "content",
+							"value": "<p>It's updated postman comment!</p>"
+						}
+					]
+				},
+				"description": "update comment by commentator"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/login?email=feysaball123@gmail.com&password=feysa123",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6IkZNejhZalBIc2JycXlqdGx4cDc0SGc9PSIsInZhbHVlIjoiTG9sYmdSVVdFOGFVNVB6TlJMS0V5MG9qcTQ2dm5tanlwbVEyWDNQM2Jsa0xJRDl2TStJU015Vk9IdExYWXV3bkFabzBQY2VLVUVhSkp6SnJ0c3UrdVRUUEE5L1pERnUxZWg5YlJzNjhCUDNia0hnTTNCZGFuaDVkY0lqNU5aaU8iLCJtYWMiOiI1YTYzMzViMjcwNzM5NDdkMzNjZDFhMzliZTE3ODIzYzQ3ODEzYTFlN2JhMTk4NDJjNWIxMmMwNWZhODdjODRjIiwidGFnIjoiIn0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/login?email=feysaball123@gmail.com&password=feysa123",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "feysaball123@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "feysa123"
+						}
+					]
+				},
+				"description": "login as user with type announcer"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/conferences/4/join",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6Im9Pd0ZqcUlOVDlTcTNuWG9FK0k1R0E9PSIsInZhbHVlIjoic0t1cGJla05MbVYzb0l0SzFiUkE3MmdKUEpxcU5tdzNta2g3YTUrSjZUZmRwdlg2RWViRzl3YUhkNE12cHRqRFJkelNicUdYOEJLdDcwWDQzL2xqemwrczZraEhKc09URGFJcE1GQzF6d2swTEc0b3c2MWNKZHU1WkRIVXh1VSsiLCJtYWMiOiJhNjQ0NGQzN2ZiYTI0NGU4NzJmMWU2MzNjYzE5NDJkMzQ4NDI4ZGQ3NmZlMzU4MDg5YWE3MjI1YjM2NmE0ZjU4IiwidGFnIjoiIn0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/conferences/4/join",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"conferences",
+						"4",
+						"join"
+					]
+				},
+				"description": "join by announcer to conference"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/lectures/4?user_id=6&conference_id=4&title=lecture title from postman1&start_time=2022-08-27 17:00:00&end_time=2022-08-27 17:30:00&description=postman description",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "multipart/form-data",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6Im9Pd0ZqcUlOVDlTcTNuWG9FK0k1R0E9PSIsInZhbHVlIjoic0t1cGJla05MbVYzb0l0SzFiUkE3MmdKUEpxcU5tdzNta2g3YTUrSjZUZmRwdlg2RWViRzl3YUhkNE12cHRqRFJkelNicUdYOEJLdDcwWDQzL2xqemwrczZraEhKc09URGFJcE1GQzF6d2swTEc0b3c2MWNKZHU1WkRIVXh1VSsiLCJtYWMiOiJhNjQ0NGQzN2ZiYTI0NGU4NzJmMWU2MzNjYzE5NDJkMzQ4NDI4ZGQ3NmZlMzU4MDg5YWE3MjI1YjM2NmE0ZjU4IiwidGFnIjoiIn0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "presentation",
+							"type": "file",
+							"src": "/C:/Users/feysa/Desktop/laravel.pptx"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/lectures/4?user_id=6&conference_id=4&title=lecture title from postman1&start_time=2022-08-27 17:00:00&end_time=2022-08-27 17:30:00&description=postman description",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"lectures",
+						"4"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "6"
+						},
+						{
+							"key": "conference_id",
+							"value": "4"
+						},
+						{
+							"key": "title",
+							"value": "lecture title from postman1"
+						},
+						{
+							"key": "start_time",
+							"value": "2022-08-27 17:00:00"
+						},
+						{
+							"key": "end_time",
+							"value": "2022-08-27 17:30:00"
+						},
+						{
+							"key": "presentation",
+							"value": "postpresentation.pptx",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "postman description"
+						}
+					]
+				},
+				"description": "create lecture by announcer"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/lectures/62?user_id=6&conference_id=4&title=lecture updated title from postman1&start_time=2022-08-27 17:00:00&end_time=2022-08-27 17:30:00&description=postman description",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "multipart/form-data",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6Im9Pd0ZqcUlOVDlTcTNuWG9FK0k1R0E9PSIsInZhbHVlIjoic0t1cGJla05MbVYzb0l0SzFiUkE3MmdKUEpxcU5tdzNta2g3YTUrSjZUZmRwdlg2RWViRzl3YUhkNE12cHRqRFJkelNicUdYOEJLdDcwWDQzL2xqemwrczZraEhKc09URGFJcE1GQzF6d2swTEc0b3c2MWNKZHU1WkRIVXh1VSsiLCJtYWMiOiJhNjQ0NGQzN2ZiYTI0NGU4NzJmMWU2MzNjYzE5NDJkMzQ4NDI4ZGQ3NmZlMzU4MDg5YWE3MjI1YjM2NmE0ZjU4IiwidGFnIjoiIn0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "presentation",
+							"type": "file",
+							"src": "/C:/Users/feysa/Desktop/laravel.pptx"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/lectures/62?user_id=6&conference_id=4&title=lecture updated title from postman1&start_time=2022-08-27 17:00:00&end_time=2022-08-27 17:30:00&description=postman description",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"lectures",
+						"62"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "6"
+						},
+						{
+							"key": "conference_id",
+							"value": "4"
+						},
+						{
+							"key": "title",
+							"value": "lecture updated title from postman1"
+						},
+						{
+							"key": "start_time",
+							"value": "2022-08-27 17:00:00"
+						},
+						{
+							"key": "end_time",
+							"value": "2022-08-27 17:30:00"
+						},
+						{
+							"key": "presentation",
+							"value": "postpresentation.pptx",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "postman description"
+						}
+					]
+				},
+				"description": "update lecture by announcer"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/lectures/62?user_id=6&conference_id=4&title=lecture updated title from postman1&start_time=2022-08-27 17:00:00&end_time=2022-08-27 17:30:00&description=postman description",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "multipart/form-data",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6Im9Pd0ZqcUlOVDlTcTNuWG9FK0k1R0E9PSIsInZhbHVlIjoic0t1cGJla05MbVYzb0l0SzFiUkE3MmdKUEpxcU5tdzNta2g3YTUrSjZUZmRwdlg2RWViRzl3YUhkNE12cHRqRFJkelNicUdYOEJLdDcwWDQzL2xqemwrczZraEhKc09URGFJcE1GQzF6d2swTEc0b3c2MWNKZHU1WkRIVXh1VSsiLCJtYWMiOiJhNjQ0NGQzN2ZiYTI0NGU4NzJmMWU2MzNjYzE5NDJkMzQ4NDI4ZGQ3NmZlMzU4MDg5YWE3MjI1YjM2NmE0ZjU4IiwidGFnIjoiIn0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "presentation",
+							"type": "file",
+							"src": "/C:/Users/feysa/Desktop/laravel.pptx"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/lectures/62",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"lectures",
+						"62"
+					],
+					"query": [
+						{
+							"key": "presentation",
+							"value": "postpresentation.pptx",
+							"disabled": true
+						}
+					]
+				},
+				"description": "delete lecture by announcer"
+			},
+			"response": []
+		}
+	]
+}
